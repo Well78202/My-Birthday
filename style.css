@@ -1,0 +1,139 @@
+body, h1, div, img, span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(213, 139, 184);
+  cursor: grab;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  color: #9f19a1;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.8em;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+.age-message p {
+  font-size: 1.5em;
+  color: #3498db;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-text {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.loading-dots::after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #3498db;
+  animation: loading-dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes loading-dots {
+  0% { content: ''; }
+  33% { content: '.'; }
+  67% { content: '..'; }
+  100% { content: '...'; }
+}
+
+#countdown {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.image-row img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-row img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#timer img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#timer img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.time-box {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(255, 0, 255);
+}
+
+@media (min-width: 600px) {
+  #countdown {
+    margin: 50px auto;
+  }
+
+  .time-box {
+    font-size: 2em;
+  }
+
+  .time-box span {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 900px) {
+  #countdown {
+    height: auto;
+  }
+}
